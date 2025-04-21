@@ -20,6 +20,16 @@
         "title": "Copy Short Commit Hash"
       }
     ],
+    "configuration": {
+      "title": "Short Commit Hash Copy",
+      "properties": {
+        "shortCommitHashCopy.enableAutoCopy": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically copy commit hash when making a new commit"
+        }
+      }
+    },
     "keybindings": [
       {
         "command": "short-commit-hash-copy.copyHash",
@@ -59,7 +69,6 @@
   "dependencies": {
     "clipboardy": "^2.3.0"
   },
-  "publisher": "Design X Develop LLC",
   "bugs": {
     "url": "https://github.com/austin-thesing/short-commit-hash-copy"
   },
@@ -67,6 +76,5 @@
   "galleryBanner": {
     "color": "#C80000",
     "theme": "dark"
-  },
-  "icon": "images/icon.png"
+  }
 }

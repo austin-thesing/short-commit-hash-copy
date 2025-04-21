@@ -100,8 +100,10 @@ function setupRepositoryListener(repository: Repository): void {
 async function checkForNewCommit(): Promise<void> {
   try {
     const currentHash = await getLatestShortCommitHash();
+    const config = vscode.workspace.getConfiguration("shortCommitHashCopy");
+    const autoCopyEnabled = config.get<boolean>("enableAutoCopy", true);
 
-    if (currentHash && lastCommitHash && currentHash !== lastCommitHash) {
+    if (currentHash && lastCommitHash && currentHash !== lastCommitHash && autoCopyEnabled) {
       await clipboardy.write(currentHash);
       vscode.window.showInformationMessage(`New commit detected! Short hash copied to clipboard: ${currentHash}`);
     }
