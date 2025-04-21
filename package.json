@@ -3,6 +3,7 @@
   "displayName": "Short Commit Hash Copy",
   "description": "Automatically copy the short GitHub commit hash when committing",
   "version": "0.0.1",
+  "publisher": "austin-thesing",
   "engines": {
     "vscode": "^1.96.0"
   },

@@ -99,17 +99,27 @@ function setupRepositoryListener(repository: Repository): void {
 
 async function checkForNewCommit(): Promise<void> {
   try {
+    console.log("Checking for new commit...");
     const currentHash = await getLatestShortCommitHash();
     const config = vscode.workspace.getConfiguration("shortCommitHashCopy");
     const autoCopyEnabled = config.get<boolean>("enableAutoCopy", true);
 
-    if (currentHash && lastCommitHash && currentHash !== lastCommitHash && autoCopyEnabled) {
-      await clipboardy.write(currentHash);
-      vscode.window.showInformationMessage(`New commit detected! Short hash copied to clipboard: ${currentHash}`);
-    }
+    console.log(`Current hash: ${currentHash}, Last hash: ${lastCommitHash}, Auto-copy enabled: ${autoCopyEnabled}`);
 
-    if (currentHash) {
-      lastCommitHash = currentHash;
+    // Only copy if auto-copy is enabled and we have a hash
+    if (currentHash && autoCopyEnabled) {
+      // If this is our first hash or it's different from the last one
+      if (!lastCommitHash || currentHash !== lastCommitHash) {
+        console.log("New commit detected, copying hash to clipboard...");
+        await clipboardy.write(currentHash);
+        vscode.window.showInformationMessage(`New commit detected! Short hash copied to clipboard: ${currentHash}`);
+        lastCommitHash = currentHash;
+        console.log("Hash copied successfully");
+      } else {
+        console.log("No new commit detected");
+      }
+    } else {
+      console.log(`Skipping copy - Current hash exists: ${!!currentHash}, Auto-copy enabled: ${autoCopyEnabled}`);
     }
   } catch (error) {
     console.error("Error checking for new commit:", error);
