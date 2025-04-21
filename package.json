@@ -29,15 +29,7 @@
           "description": "Automatically copy commit hash when making a new commit"
         }
       }
-    },
-    "keybindings": [
-      {
-        "command": "short-commit-hash-copy.copyHash",
-        "key": "ctrl+shift+h",
-        "mac": "cmd+shift+h",
-        "when": "workspaceHasGit"
-      }
-    ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",

@@ -17,7 +17,6 @@ This manual process was time-consuming and interrupted my workflow, especially w
 ## Features
 
 - **Automatic Copy**: Automatically copies the short commit hash to your clipboard whenever you make a new commit
-- **Manual Copy**: Use the keyboard shortcut `Cmd+Shift+H` (macOS) or `Ctrl+Shift+H` (Windows/Linux) to copy the latest commit hash at any time
 - **Status Notifications**: Shows a notification when a commit hash is copied to your clipboard
 - **Git Integration**: Seamlessly works with Git repositories in your workspace
 
@@ -27,20 +26,6 @@ This manual process was time-consuming and interrupted my workflow, especially w
 2. Go to the Extensions view (`Cmd+Shift+X` / `Ctrl+Shift+X`)
 3. Search for "Short Commit Hash Copy"
 4. Click Install
-
-## Usage
-
-The extension works in two ways:
-
-1. **Automatic Mode**: Every time you make a commit, the short hash is automatically copied to your clipboard
-2. **Manual Mode**: Press `Cmd+Shift+H` (macOS) or `Ctrl+Shift+H` (Windows/Linux) to copy the latest commit hash
-
-When a hash is copied, you'll see a notification in VS Code confirming the action.
-
-## Requirements
-
-- VS Code 1.96.0 or higher
-- Git installed and configured in your workspace
 
 ## Extension Settings
 
@@ -59,7 +44,6 @@ None at this time. If you find any issues, please report them on our [GitHub rep
 Initial release:
 
 - Automatic commit hash copying
-- Manual copy via keyboard shortcut
 - Notification system for copy actions
 
 ## License
