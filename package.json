@@ -1,0 +1,54 @@
+{
+  "name": "short-commit-hash-copy",
+  "displayName": "Short Commit Hash Copy",
+  "description": "Automatically copy the short GitHub commit hash when committing",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "workspaceContains:.git"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "short-commit-hash-copy.copyHash",
+        "title": "Copy Short Commit Hash"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "test": "node ./out/test/runTest.js"
+  },
+  "keywords": [
+    "git",
+    "github",
+    "commit",
+    "hash",
+    "clipboard"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/short-commit-hash-copy.git"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/node": "^22.14.1",
+    "@types/vscode": "^1.96.0",
+    "typescript": "^5.8.3",
+    "vscode-test": "^1.6.1"
+  },
+  "dependencies": {
+    "clipboardy": "^2.3.0"
+  }
+}
