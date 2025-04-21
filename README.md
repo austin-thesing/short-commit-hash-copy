@@ -16,6 +16,7 @@ A VS Code extension that automatically copies the short GitHub commit hash to yo
 ## How it works
 
 This extension:
+
 1. Monitors your Git repositories for new commits
 2. When a new commit is detected, it extracts the short commit hash (7 characters)
 3. Automatically copies this hash to your clipboard
@@ -34,6 +35,7 @@ This extension doesn't have any settings yet.
 ### 0.0.1
 
 Initial release:
+
 - Auto-copy short commit hash on commit
 - Manual command to copy latest short hash
 

@@ -19,6 +19,14 @@
         "command": "short-commit-hash-copy.copyHash",
         "title": "Copy Short Commit Hash"
       }
+    ],
+    "keybindings": [
+      {
+        "command": "short-commit-hash-copy.copyHash",
+        "key": "ctrl+shift+h",
+        "mac": "cmd+shift+h",
+        "when": "workspaceHasGit"
+      }
     ]
   },
   "scripts": {
@@ -39,7 +47,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/username/short-commit-hash-copy.git"
+    "url": "https://github.com/austin-thesing/short-commit-hash-copy.git"
   },
   "devDependencies": {
     "@types/glob": "^8.1.0",
@@ -50,5 +58,15 @@
   },
   "dependencies": {
     "clipboardy": "^2.3.0"
-  }
+  },
+  "publisher": "Design X Develop LLC",
+  "bugs": {
+    "url": "https://github.com/austin-thesing/short-commit-hash-copy"
+  },
+  "homepage": "https://github.com/austin-thesing/short-commit-hash-copy",
+  "galleryBanner": {
+    "color": "#C80000",
+    "theme": "dark"
+  },
+  "icon": "images/icon.png"
 }
